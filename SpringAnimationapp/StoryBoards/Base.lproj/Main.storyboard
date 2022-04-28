@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="SpringAnimationapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-32-bYG" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="48" width="146" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-tc-Yap">
+                                        <rect key="frame" x="13" y="8" width="120" height="75"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstItem="6Nh-tc-Yap" firstAttribute="top" secondItem="PPd-32-bYG" secondAttribute="topMargin" id="89t-O8-GpJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Nh-tc-Yap" secondAttribute="bottom" constant="10" id="PwR-Qx-Hhr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6Nh-tc-Yap" secondAttribute="trailing" constant="5" id="T61-fn-uGj"/>
+                                    <constraint firstItem="6Nh-tc-Yap" firstAttribute="leading" secondItem="PPd-32-bYG" secondAttribute="leadingMargin" constant="5" id="Z5M-yo-Acq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-d2-6OU">
+                                <rect key="frame" x="87" y="497" width="146" height="41"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Run">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="runSpringAnimation" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Eo-2C-v3q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PPd-32-bYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Hrp-Cj-uWr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6tl-d2-6OU" secondAttribute="bottom" constant="30" id="KUU-E7-xVN"/>
+                            <constraint firstItem="6tl-d2-6OU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Uyg-gf-egE"/>
+                            <constraint firstItem="6tl-d2-6OU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0721831" id="eeU-Wt-75R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6tl-d2-6OU" secondAttribute="trailing" constant="87" id="jbO-e9-dTU"/>
+                            <constraint firstItem="PPd-32-bYG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.163732" id="lrc-Z0-M8E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PPd-32-bYG" secondAttribute="trailing" constant="87" id="lty-0S-7Xf"/>
+                            <constraint firstItem="PPd-32-bYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="uKf-fn-4SE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="6tl-d2-6OU" id="46M-Hq-qdo"/>
+                        <outlet property="springAnimationView" destination="PPd-32-bYG" id="MWh-AM-jj2"/>
+                        <outlet property="springLabel" destination="6Nh-tc-Yap" id="YH5-a9-c4Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="85.563380281690144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
